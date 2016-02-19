@@ -20,9 +20,35 @@ public class Ball : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collider)
     {
+		bool invalidCollider = false;
         Vector2 normal = collider.contacts[0].normal;
-        direction = Vector2.Reflect(direction, normal);
-        direction.Normalize();
+        Platform platform = collider.transform.GetComponent<Platform>();
+        EdgesGenerator edgesGenerator = collider.transform.GetComponent<EdgesGenerator>();
+
+        if(platform != null)
+        {
+            if(normal != Vector2.up)
+            {
+				invalidCollider = true;
+            }
+        }
+        else if(edgesGenerator != null)
+        {
+            if(normal == Vector2.up)
+            {
+				invalidCollider = true;
+            }
+        }
+		if (!invalidCollider) 
+		{
+			direction = Vector2.Reflect (direction, normal);
+			direction.Normalize ();
+		} 
+		else 
+		{
+			GameOver.EndingGame ();
+		}
+        
     }
 }
 
