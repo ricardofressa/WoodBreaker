@@ -3,13 +3,26 @@ using System.Collections;
 
 public class Ball : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public Vector3 direction;
+    public float velocity;
+
+	void Start ()
+    {
+
+        direction.Normalize();
 	
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void Update ()
+    {
+        transform.position += direction * velocity * Time.deltaTime;
 	}
+
+    void OnCollisionEnter2D(Collision2D collider)
+    {
+        Vector2 normal = collider.contacts[0].normal;
+        direction = Vector2.Reflect(direction, normal);
+        direction.Normalize();
+    }
 }
+
