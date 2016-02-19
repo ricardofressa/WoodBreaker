@@ -25,20 +25,26 @@ public class Ball : MonoBehaviour {
         Platform platform = collider.transform.GetComponent<Platform>();
         EdgesGenerator edgesGenerator = collider.transform.GetComponent<EdgesGenerator>();
 
-        if(platform != null)
-        {
-            if(normal != Vector2.up)
-            {
+		if (platform != null) 
+		{
+			if (normal != Vector2.up) 
+			{
 				invalidCollider = true;
-            }
-        }
-        else if(edgesGenerator != null)
-        {
-            if(normal == Vector2.up)
-            {
+			}
+		} 
+		else if (edgesGenerator != null)
+		{
+			if (normal == Vector2.up)
+			{
 				invalidCollider = true;
-            }
-        }
+			}
+		} 
+		else 
+		{
+			invalidCollider = false;
+			Destroy (collider.gameObject);
+		}
+
 		if (!invalidCollider) 
 		{
 			direction = Vector2.Reflect (direction, normal);
