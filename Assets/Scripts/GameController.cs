@@ -2,8 +2,9 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class GameOver : MonoBehaviour {
+public class GameController : MonoBehaviour {
 
+	public static int totalOfBlocks;
 
     public static void EndingGame()
     {

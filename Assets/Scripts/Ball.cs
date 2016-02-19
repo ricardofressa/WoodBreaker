@@ -52,7 +52,7 @@ public class Ball : MonoBehaviour {
 		} 
 		else 
 		{
-			GameOver.EndingGame ();
+			GameController.EndingGame ();
 		}
         
     }
