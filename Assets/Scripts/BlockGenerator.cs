@@ -30,7 +30,7 @@ public class BlockGenerator : MonoBehaviour {
 				GameObject randomBlock = blocks [Random.Range (0, blocks.Length)];
 				GameObject instatiateBlock = (GameObject) Instantiate (randomBlock);
 
-				instatiateBlock.transform.position = new Vector3(-(screenWidth * 0.05f) + (j * blockWidth * multiplierWidth), (screenHeight * 0.05f) - (i * blockHeight), 0);
+				instatiateBlock.transform.position = new Vector3(-(screenWidth * 0.50f) + (j * blockWidth * multiplierWidth), (screenHeight * 0.40f) - (i * blockHeight), 0);
 				float newWidthBlock = instatiateBlock.transform.localScale.x * multiplierWidth;
 				instatiateBlock.transform.localScale = new Vector3 (newWidthBlock, instatiateBlock.transform.localScale.y, 1);
 			}	
@@ -45,7 +45,7 @@ public class BlockGenerator : MonoBehaviour {
 		Camera camera = Camera.main;
 		screenWidth = (camera.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)) - camera.ScreenToWorldPoint(new Vector3(0,0,0))).x;
 		screenHeight = (camera.ScreenToWorldPoint (new Vector3 (0, Screen.height, 0)) - camera.ScreenToWorldPoint (new Vector3 (0, 0, 0))).y;
-		columns = (int) (screenWidth/ blockWidth);
+		columns = (int)(screenWidth / blockWidth);
 
 		multiplierWidth = screenWidth / (columns * blockWidth);
 			
