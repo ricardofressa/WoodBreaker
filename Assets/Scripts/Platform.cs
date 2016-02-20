@@ -9,7 +9,7 @@ public class Platform : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-	
+		limitInX = Camera.main.ScreenToWorldPoint (new Vector3 (Screen.width, 0, 0)).x - GetComponent<SpriteRenderer> ().bounds.extents.x;
 	}
 	
 	// Update is called once per frame
