@@ -6,6 +6,7 @@ public class Ball : MonoBehaviour {
     public Vector3 direction;
     public float velocity;
 	public GameObject particleBlocks;
+	public ParticleSystem particleLeaf;
 
 	void Start ()
     {
@@ -28,9 +29,15 @@ public class Ball : MonoBehaviour {
 
 		if (platform != null) 
 		{
-			if (normal != Vector2.up) 
+			if (normal != Vector2.up)
 			{
 				invalidCollider = true;
+			}
+			else
+			{
+				particleLeaf.transform.position = platform.transform.position;
+				Debug.Log ("Play particleLeaf");
+				particleLeaf.Play ();
 			}
 		} 
 		else if (edgesGenerator != null)
