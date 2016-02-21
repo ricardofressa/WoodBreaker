@@ -20,7 +20,7 @@ public class BlockGenerator : MonoBehaviour {
 		int columns;
 
 		CollectInformationsOfBlock (blockWidth, out screenWidth, out screenHeight, out columns, out multiplierWidth);
-		GameController.totalOfBlocks = lines * columns;
+		GameController.numberTotalOfBlocks = lines * columns;
 		for (int i = 0; i < lines; i++) 
 		{
 			for (int j = 0; j < columns; j++) 

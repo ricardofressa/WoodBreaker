@@ -54,6 +54,7 @@ public class Ball : MonoBehaviour {
 			Vector3 createPosition = new Vector3 (collider.transform.position.x + colliderBorder.extents.x, collider.transform.position.y - colliderBorder.extents.y, collider.transform.position.z);
 			GameObject particle = (GameObject) Instantiate (particleBlocks, createPosition, Quaternion.identity);
 			ParticleSystem particleComponent = particle.GetComponent<ParticleSystem> ();
+			GameController.numberOfBlocksDestroyed++;
 			Destroy (particle, particleComponent.duration + particleComponent.startLifetime);
 			Destroy (collider.gameObject);
 		}
@@ -62,10 +63,11 @@ public class Ball : MonoBehaviour {
 		{
 			direction = Vector2.Reflect (direction, normal);
 			direction.Normalize ();
+
 		} 
 		else 
 		{
-			GameController.EndingGame ();
+			GameController.instance.EndingGame ();
 		}
         
     }

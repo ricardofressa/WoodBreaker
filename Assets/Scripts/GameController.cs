@@ -1,23 +1,40 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
-	public static int totalOfBlocks;
+	public static int numberTotalOfBlocks;
+	public static int numberOfBlocksDestroyed;
+	public Image stars;
+	public GameObject canvasGO;
+	public static GameController instance;
+	public Ball ball;
+	public Platform platform;
 
-    public static void EndingGame()
+	void Awake()
+	{
+		instance = this;
+	}
+
+
+    public void EndingGame()
     {
-		SceneManager.LoadScene ("game");
+		canvasGO.SetActive (true);
+		stars.fillAmount = (float) numberOfBlocksDestroyed  / (float) numberTotalOfBlocks; 
+		platform.enabled = false;
+		Destroy (ball.gameObject);
+
     }
 
-	// Use this for initialization
 	void Start () {
-	
+		canvasGO.SetActive (false);
+		numberOfBlocksDestroyed = 0;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	public void AlterScene(string scene)
+	{
+		SceneManager.LoadScene (scene);
 	}
 }
