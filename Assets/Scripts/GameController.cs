@@ -10,6 +10,8 @@ public class GameController : MonoBehaviour {
 	public Image stars;
 	public GameObject canvasGO;
 	public static GameController instance;
+	public Ball ball;
+	public Platform platform;
 
 	void Awake()
 	{
@@ -20,6 +22,10 @@ public class GameController : MonoBehaviour {
     public void EndingGame()
     {
 		canvasGO.SetActive (true);
+		stars.fillAmount = (float) numberOfBlocksDestroyed  / (float) numberTotalOfBlocks; 
+		platform.enabled = false;
+		Destroy (ball.gameObject);
+
     }
 
 	void Start () {
@@ -27,7 +33,8 @@ public class GameController : MonoBehaviour {
 		numberOfBlocksDestroyed = 0;
 	}
 
-	void Update () {
-		stars.fillAmount = (float) numberOfBlocksDestroyed  / (float) numberTotalOfBlocks; 
+	public void AlterScene(string scene)
+	{
+		SceneManager.LoadScene (scene);
 	}
 }
