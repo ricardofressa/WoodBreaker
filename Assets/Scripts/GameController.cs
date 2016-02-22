@@ -29,7 +29,6 @@ public class GameController : MonoBehaviour {
     }
 
 	void Start () {
-		canvasGO.SetActive (false);
 		numberOfBlocksDestroyed = 0;
 	}
 
@@ -37,4 +36,9 @@ public class GameController : MonoBehaviour {
 	{
 		SceneManager.LoadScene (scene);
 	}
+
+	public void CloseApplication(){
+		Application.Quit ();
+	}
+
 }
