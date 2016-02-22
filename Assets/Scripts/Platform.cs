@@ -15,11 +15,17 @@ public class Platform : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		float horizontalDirection = Input.GetAxis ("Mouse X");
-		transform.position += Vector3.right * horizontalDirection * movementVelocity * Time.deltaTime;
+		if (Input.touches.Length > 0) {
+			// Apenas funciona com o primeiro toque
+			// e apenas se mover o dedo desde o último frame
+			if (Input.touches [0].phase == TouchPhase.Moved) {
+				float horizontalDirection = Input.GetAxis ("Mouse X");
+				transform.position += Vector3.right * horizontalDirection * movementVelocity * Time.deltaTime;
 
-		float ActualX = transform.position.x;
-		ActualX = Mathf.Clamp (ActualX, -limitInX, limitInX);
-		transform.position = new Vector3 (ActualX, transform.position.y, transform.position.z);
+				float ActualX = transform.position.x;
+				ActualX = Mathf.Clamp (ActualX, -limitInX, limitInX);
+				transform.position = new Vector3 (ActualX, transform.position.y, transform.position.z);
+			}
+		}
 	}
 }
