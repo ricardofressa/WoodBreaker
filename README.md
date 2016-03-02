@@ -11,11 +11,11 @@ It has not been tested in previous versions.
 
 # Some pictures...
 
-![MENUGAME](https://dl.dropboxusercontent.com/u/20234298/Pictures%20Games/Screenshot_20160302-085724.png)
+![MENUGAME](https://dl.dropboxusercontent.com/u/20234298/Pictures%20Games/Screenshot_20160302-085724.png =600x400)
 
-![GAMEPLAY](https://dl.dropboxusercontent.com/u/20234298/Pictures%20Games/Screenshot_20160302-085737.png)
+![GAMEPLAY](https://dl.dropboxusercontent.com/u/20234298/Pictures%20Games/Screenshot_20160302-085737.png =600x400)
 
-![GAMEOVER](https://dl.dropboxusercontent.com/u/20234298/Pictures%20Games/Screenshot_20160302-085743.png)
+![GAMEOVER](https://dl.dropboxusercontent.com/u/20234298/Pictures%20Games/Screenshot_20160302-085743.png =600x400)
 
-![GAMEOVERSTAR](https://dl.dropboxusercontent.com/u/20234298/Pictures%20Games/Screenshot_20160302-090001.png)
+![GAMEOVERSTAR](https://dl.dropboxusercontent.com/u/20234298/Pictures%20Games/Screenshot_20160302-090001.png =600x400)
 
