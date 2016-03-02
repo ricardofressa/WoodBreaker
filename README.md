@@ -2,7 +2,7 @@
 Game create to learning
 
 This game was create for learning.
-You can be cloned, modified and improved, but can not be distributed with the same models.
+It can be cloned, modified and improved, but can not be distributed with the same models.
 
 # Unity 5.3.2f1 (64-bit)
 
@@ -11,11 +11,11 @@ It has not been tested in previous versions.
 
 # Some pictures...
 
-![MENUGAME](https://goo.gl/WiqyxO)
+![MENUGAME](https://dl.dropboxusercontent.com/u/20234298/Pictures%20Games/Screenshot_20160302-085724.png)
 
-![GAMEPLAY](https://goo.gl/hBVAHU)
+![GAMEPLAY](https://dl.dropboxusercontent.com/u/20234298/Pictures%20Games/Screenshot_20160302-085737.png)
 
-![GAMEOVER](https://goo.gl/M0Wd11)
+![GAMEOVER](https://dl.dropboxusercontent.com/u/20234298/Pictures%20Games/Screenshot_20160302-085743.png)
 
-![GAMEOVERSTAR](https://goo.gl/1hGFvA)
+![GAMEOVERSTAR](https://dl.dropboxusercontent.com/u/20234298/Pictures%20Games/Screenshot_20160302-090001.png)
 
